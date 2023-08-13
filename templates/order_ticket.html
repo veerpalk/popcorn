@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Movie Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ticket-container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ticket-type {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .ticket-label {
+            flex: 1;
+            font-size: 18px;
+        }
+
+        .ticket-button {
+            background-color: #006666;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+
+        
+        .ticket-button:hover {
+            background-color: #009999;
+        }
+
+        .ticket-count {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 18px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .order-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #006666;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .order-button:hover {
+            background-color: #009999;
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="ticket-header">
+            <h1>Order Movie Tickets</h1>
+        </div>
+        <form action="/order_tickets/{{ movie_id }}/{{movie_title}}/{{ show_timings }}/{{date}}/{{day}}" method="post">
+            <div class="ticket-type">
+                <label class="ticket-label">Adult Tickets:</label>
+                <label class="ticket-label">{{ticket_prices['adult']}}$</label>
+                <button class="ticket-button" type="button" id="decreaseAdult">-</button>
+                <span class="ticket-count" id="adult_tickets" value = 0>0</span>
+                <button class="ticket-button" type="button" id="increaseAdult">+</button>
+            </div>
+            <div class="ticket-type">
+                <label class="ticket-label">Child Tickets:</label>
+                <label class="ticket-label">{{ticket_prices['child']}}$</label>
+                <button class="ticket-button" type="button" id="decreaseChild">-</button>
+                <span class="ticket-count" id="child_tickets" value = 0>0</span>
+                <button class="ticket-button" type="button" id="increaseChild">+</button>
+            </div>
+            <div class="ticket-type">
+                <label class="ticket-label">Senior Tickets:</label>
+                <label class="ticket-label">{{ticket_prices['senior']}}$</label>
+                <button class="ticket-button" type="button" id="decreaseSenior">-</button>
+                <span class="ticket-count" id="senior_tickets" value = 0>0</span>
+                <button class="ticket-button" type="button" id="increaseSenior">+</button>
+            </div>
+            <button class="order-button" type="submit">Place Order</button>
+        </form>
+    </div>
+    
+    <script>
+        // JavaScript for incrementing and decrementing ticket counts
+        const adultCount = document.getElementById('adult_tickets');
+        const childCount = document.getElementById('child_tickets');
+        const seniorCount = document.getElementById('senior_tickets');
+
+        const decreaseAdult = document.getElementById('decreaseAdult');
+        const increaseAdult = document.getElementById('increaseAdult');
+        const decreaseChild = document.getElementById('decreaseChild');
+        const increaseChild = document.getElementById('increaseChild');
+        const decreaseSenior = document.getElementById('decreaseSenior');
+        const increaseSenior = document.getElementById('increaseSenior');
+
+        let adultTickets = 0;
+        let childTickets = 0;
+        let seniorTickets = 0;
+
+        decreaseAdult.addEventListener('click', () => {
+            if (adultTickets > 0) {
+                adultTickets--;
+                adultCount.innerText = adultTickets;
+                adultCount.value = adultTickets;
+
+            }
+        });
+
+        increaseAdult.addEventListener('click', () => {
+            adultTickets++;
+            adultCount.innerText = adultTickets;
+            adultCount.value = adultTickets;
+        });
+
+        decreaseChild.addEventListener('click', () => {
+            if (childTickets > 0) {
+                childTickets--;
+                childCount.innerText = childTickets;
+                childCount.value = childTickets;
+            }
+        });
+
+        increaseChild.addEventListener('click', () => {
+            childTickets++;
+            childCount.innerText = childTickets;
+            childCount.value = childTickets;
+        });
+
+        decreaseSenior.addEventListener('click', () => {
+            if (seniorTickets > 0) {
+                seniorTickets--;
+                seniorCount.innerText = seniorTickets;
+                seniorCount.value = seniorTickets;
+            }
+        });
+
+        increaseSenior.addEventListener('click', () => {
+            seniorTickets++;
+            seniorCount.innerText = seniorTickets;
+            seniorCount.value = seniorTickets;
+        });
+    </script>
+</body>
+</html>

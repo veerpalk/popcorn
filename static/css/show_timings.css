@@ -1,0 +1,107 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the layout */
+.container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 1px;
+}
+
+/* Theater List */
+.theater-list {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.theater-card {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    background-color: #f8f8f8;
+}
+
+.theater-card:hover {
+    background-color: #f0f0f0;
+}
+
+.theater-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.theater-address {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Show Timings */
+.timings {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.show-timings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.theater-timings {
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.theater-timings:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.format {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.timing-day {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.timing {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .timings, .theater-list {
+        padding: 0;
+    }
+
+    .theater-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,1 @@
+https://www.cineplex.com/api/v1/theatres?language=en-us&range=100&skip=0&take=100

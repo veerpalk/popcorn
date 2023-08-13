@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+
+.search-location-container {
+    background-color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #006666;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.location-tab {
+    display: flex;
+}
+
+.location-tab .tab {
+    padding: 10px 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.location-tab .tab.active {
+    background-color: #009999;
+    color: #fff;
+}
+
+/* Add more styles as needed */
+/* Add these CSS styles to center the search bar */
+.search-location-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.search-center {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"],
+.search-bar button {
+    margin-right: 10px;
+}
+
+/* ... Existing CSS styles ... */

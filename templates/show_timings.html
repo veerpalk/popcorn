@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theater Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+        .theater {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #555;
+            background-color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .theater h2 {
+            margin-top: 0;
+        }
+        .format {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .format h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #555;
+        }
+        .show-timings {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+        .timing-button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .timing-button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #006666;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .timing-button:hover{
+            background-color: #009999;
+        }
+        .date-entry {
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+            color: #ccc;
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Theater Listings</h1>
+    {% for theater in movie_data %}
+        <div class="theater">
+            <h2>{{ theater['name'] }}</h2>
+            {% for format, timings in theater['movie']['show_timings'].items() %}
+                <div class="format">
+                    <h3>{{ format }}</h3>
+                    {% for date_entry in timings['dates'] %}
+                        <div class="date-entry"> 
+                            <h3>{{ date_entry['date'] }} {{ date_entry['day'] }}</h3>
+                            <div class="timing-button-container">
+                                {% for timing in date_entry['show_timings'] %}
+                                    <a class="timing-button"
+                                    href={{ url_for('seat_selection', movie_id=movie_id, date = date_entry['date'],
+                                     day = date_entry['day'], show_timings = timing) }}
+                                   >{{ timing }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</body>
+</html>

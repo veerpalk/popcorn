@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Movie - {{ movie_data.title }}</title>
+   
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about_movie.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/search.css') }}">
+
+</head>
+<body>
+    <div class="movie-container">
+        <div class="movie-poster">
+            <img src="https://image.tmdb.org/t/p/original{{ movie_data.poster_path }}" alt="{{ movie_data.title }} height="300px" width = "100%">
+        </div>
+        <div class="movie-info">
+            <h1>{{ movie_data.title }}</h1>
+            <p class="tagline">{{ movie_data.tagline }}</p>
+            <p class="overview">{{ movie_data.overview }}</p>
+            <div class="details">
+                <p><strong>Release Date:</strong> {{ movie_data.release_date }}</p>
+                <p><strong>Language:</strong> {{ movie_data.original_language }}</p>
+                <p><strong>Genre:</strong> {{ movie_data.genres|join(', ') }}</p>
+                <p><strong>Status:</strong> {{ movie_data.status }}</p>
+                <p><strong>Runtime:</strong> {{ movie_data.runtime }} minutes</p>
+            </div>
+            <div class="production-companies">
+                <h2>Production Companies:</h2>
+                <ul>
+                    {% for company in movie_data.production_companies %}
+                        <li>{{ company.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="spoken-languages">
+                <h2>Spoken Languages:</h2>
+                <ul>
+                    {% for lang in movie_data.spoken_languages %}
+                        <li>{{ lang.english_name }} ({{ lang.name }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <p class="homepage"><strong>Homepage:</strong> <a href="{{ movie_data.homepage }}" target="_blank">{{ movie_data.homepage }}</a></p>
+
+            <div class = "btn">
+                <span>
+                    <a href="{{ url_for('movie_list')}}" class="book-ticket-btn">Back</a>
+
+                </span>
+                <span>
+                    <a href="{{ url_for('show_timings', movie_id=movie_data.id) }}" class="book-ticket-btn">Book Ticket</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

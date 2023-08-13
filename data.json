@@ -1,0 +1,297 @@
+{
+  "2D": {
+    "dates": [
+      {
+        "date": "2023-07-27",
+        "day": "Thursday",   
+        "show_timings": [    
+          "11:00 AM",        
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-28",
+        "day": "Friday",     
+        "show_timings": [    
+          "10:30 AM",        
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-29",
+        "day": "Saturday",
+        "show_timings": [
+          "11:00 AM",
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-30",
+        "day": "Sunday",
+        "show_timings": [
+          "11:00 AM",
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-31",
+        "day": "Monday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      }
+    ]
+  },
+  "3D": {
+    "dates": [
+      {
+        "date": "2023-07-27",
+        "day": "Thursday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-28",
+        "day": "Friday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-29",
+        "day": "Saturday",
+        "show_timings": [
+          "11:00 AM",
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-30",
+        "day": "Sunday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-31",
+        "day": "Monday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      }
+    ]
+  },
+  "IMAX": {
+    "dates": [
+      {
+        "date": "2023-07-27",
+        "day": "Thursday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-28",
+        "day": "Friday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-29",
+        "day": "Saturday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-30",
+        "day": "Sunday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-31",
+        "day": "Monday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      }
+    ]
+  },
+  "AVR": {
+    "dates": [
+      {
+        "date": "2023-07-27",
+        "day": "Thursday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-28",
+        "day": "Friday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-29",
+        "day": "Saturday",
+        "show_timings": [
+          "10:30 AM",
+          "1:30 PM",
+          "4:30 PM",
+          "7:30 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-30",
+        "day": "Sunday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-31",
+        "day": "Monday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      }
+    ]
+  },
+  "DBOX": {
+    "dates": [
+      {
+        "date": "2023-07-27",
+        "day": "Thursday",
+        "show_timings": [
+          "11:00 AM",
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-28",
+        "day": "Friday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-29",
+        "day": "Saturday",
+        "show_timings": [
+          "11:00 AM",
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-30",
+        "day": "Sunday",
+        "show_timings": [
+          "10:00 AM",
+          "1:00 PM",
+          "4:00 PM",
+          "7:00 PM",
+          "9:00 PM"
+        ]
+      },
+      {
+        "date": "2023-07-31",
+        "day": "Monday",
+        "show_timings": [
+          "11:00 AM",
+          "2:00 PM",
+          "5:00 PM",
+          "8:00 PM",
+          "9:00 PM"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    
+</head>
+<body class="dark-mode">
+    <div class="login-form">
+        <h1>Login</h1>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="/login" method="POST">
+            <div class="input-field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button class="submit-btn waves-effect waves-light btn" type="submit">Login</button>
+            <div class="form-links">
+                <a class="create-account-link" href="/signup">Create Account</a>
+                <a class="create-account-link" href="/forgot">Forgot Password?</a>
+            </div>
+        </form>
+        <div class="oauth-container">
+            <p>Or</p>
+            <a class="google-login-btn btn" href="/google/login">
+                <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google sign-in">
+                Login with Google
+            </a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+</html>
